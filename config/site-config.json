@@ -1,0 +1,177 @@
+{
+  "landing": {
+    "socials": [
+      {
+        "url": "https://www.linkedin.com/in/manas-patel",
+        "fgColor": "grey",
+        "bgColor": "transparent"
+      },
+      {
+        "url": "https://twitter.com/manaspatel_",
+        "fgColor": "grey",
+        "bgColor": "transparent"
+      },
+      {
+        "url": "https://www.instagram.com/im_manas_45/",
+        "fgColor": "grey",
+        "bgColor": "transparent"
+      },
+      {
+        "url": "https://github.com/patel-manas",
+        "fgColor": "grey",
+        "bgColor": "transparent"
+      },
+      {
+        "url": "",
+        "network": "email",
+        "fgColor": "grey",
+        "bgColor": "transparent"
+      }
+    ],
+    "role": "frontend engineer",
+    "heroImage": "https://letarior.sirv.com/Images/wonder_1676279095735.jpg",
+    "taglines": [
+      "Hi!, I am Manas.",
+      "Crafting dynamic user experiences.",
+      "React-ing to the web."
+    ],
+    "links": [
+      {
+        "displayText": "about",
+        "url": "about"
+      },
+      {
+        "displayText": "experience",
+        "url": "experience"
+      },
+      {
+        "displayText": "skills",
+        "url": "skills"
+      },
+      {
+        "displayText": "projects",
+        "url": "projects"
+      }
+    ]
+  },
+  "about": {
+    "intro": "Meet Manas Patel, a talented Software Engineer with a passion for building elegant and efficient web applications. Originally from Sundargarh, Manas currently calls Bangalore home. He attended Orissa Engineering College where he honed his skills and began his journey as a Frontend Developer. With 7 years of experience in the field, Manas has worked for some of the most reputable companies in the industry including TCS, CISCO, Walmart, and Coinbase. His extensive skill set includes proficiency in various programming languages and technologies such as React, JavaScript, TypeScript, HTML/CSS, Angular, Python, Node, SQL, MongoDB, and AWS. Manas' expertise in Frontend Development and Web Technologies is unparalleled, and his passion for the field is apparent in the quality of his work. He is known for his attention to detail, problem-solving skills, and ability to create visually stunning user interfaces. When he's not immersed in coding, Manas enjoys playing cricket, experimenting with new recipes in the kitchen, travelling and exploring rare food cuisines.",
+    "aboutImage": "https://letarior.sirv.com/Images/wonder_1676279108889.jpg"
+  },
+  "skills": {
+    "technologies": [
+      {
+        "name": "React.JS",
+        "proficiency": "Expert"
+      },
+      {
+        "name": "Javascript",
+        "proficiency": "Expert"
+      },
+      {
+        "name": "Typescript",
+        "proficiency": "Expert"
+      },
+      {
+        "name": "HTML/CSS",
+        "proficiency": "Expert"
+      },
+      {
+        "name": "Angular",
+        "proficiency": "intermediate"
+      },
+      {
+        "name": "Node.js",
+        "proficiency": "intermediate"
+      },
+      {
+        "name": "SQL",
+        "proficiency": "intermediate"
+      },
+      {
+        "name": "Python",
+        "proficiency": "beginer"
+      },
+      {
+        "name": "MongoDB",
+        "proficiency": "beginer"
+      },
+      {
+        "name": "AWS",
+        "proficiency": "beginer"
+      }
+    ]
+  },
+  "experience": [
+    {
+      "title": "Senior Software Engineer - Frontend",
+      "comapanyName": "Coinbase",
+      "comapanyImg": "https://letarior.sirv.com/Images/logos/brand-coinbase-logo.webp",
+      "skills": [
+        "React",
+        "Typescript",
+        "Python",
+        "AWS Neptune",
+        "SQL",
+        "Airflow"
+      ],
+      "tenure": {
+        "from": "May, 2022",
+        "to": "Feb, 2023"
+      },
+      "summary": [
+        "Led the design of a bot maker, a visual tool for building bot workflows saving ~$10m per year in expenses.",
+        "Designed and developed internal apps to aid ML/DS engineers in managing their ML models resulting in better DX and reducing repeated manual work.",
+        "Led the design and development of a graph database on the AWS cloud POC , which would have been a one stop solution for block chain data at company level"
+      ]
+    },
+    {
+      "title": "Software Engineer III - Frontend",
+      "comapanyName": "Walmart Labs",
+      "comapanyImg": "https://letarior.sirv.com/Images/logos/5StAbRHLA4ZdyzQZVivm2c.jpg",
+      "skills": ["React", "Typescript", "GraphQL", "Node.js"],
+      "tenure": {
+        "from": "Nov, 2020",
+        "to": "Apr, 2022"
+      },
+      "summary": [
+        "Designed and Implemented BFF architecture with React.js, Node.js and GraphQL to address all API needs for both web and mobile resulting 50% of configuration bugs and seamless integration.",
+        "Enriched the Ad platform for ASDA.COM by quickly implementing various advertisements from PM's which later on resulted in ~20% revenue growth from Ad's."
+      ]
+    },
+    {
+      "title": "Software Engineer II - Frontend",
+      "comapanyName": "Cisco Systems India Pvt. Ltd.",
+      "comapanyImg": "https://letarior.sirv.com/Images/logos/download.png",
+      "skills": ["React", "Javascript", "Jquery", "Backbone.js"],
+      "tenure": {
+        "from": "Oct, 2019",
+        "to": "Nov, 2011"
+      },
+      "summary": [
+        "Upgraded existing app by migrating legacy code to React.js with Redux, hooks, and modern tools",
+        "Developed a framework for visualizing device tree using React, HTML canvas, and libraries such as GoJS",
+        "Boosted site loading speed by 30% using techniques such as Lazy Loading, Pure Components, and sprite optimization",
+        "Maintained high code quality through practices such as TDD and peer reviews, resulting in fewer Sonar code smells."
+      ]
+    },
+    {
+      "title": "System Engineer",
+      "comapanyName": "TCS",
+      "comapanyImg": "https://letarior.sirv.com/Images/logos/Logo.svg",
+      "skills": ["Angular", "React", "Typescript", "MongoDB", "Docker"],
+      "tenure": {
+        "from": "Aug, 2016",
+        "to": "Oct, 2019"
+      },
+      "summary": [
+        "Developed advanced UI screens with robust data support for Excel-like functionality",
+        "Implemented global state management using Angular and Ngrx",
+        "Utilized modern scripting and ES6 features with TypeScript to reduce errors",
+        "Created reusable components and utilities for consistent design across the application."
+      ]
+    }
+  ],
+  "projects": {},
+  "contact": {}
+}
