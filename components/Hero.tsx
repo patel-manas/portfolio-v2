@@ -16,7 +16,10 @@ const Hero = ({ data }: Props) => {
     delaySpeed: 2000,
   });
   return (
-    <div className="relative h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
+    <div
+      className="relative h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden"
+      style={{ top: "4em" }}
+    >
       <BackgroundCircles />
       <img
         className="relative rounded-full h-32 w-32 mx-auto object-cover"

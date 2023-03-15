@@ -37,38 +37,38 @@ const Header = ({ data }: Props) => {
           ) : null;
         })}
       </motion.div>
-      <Link href="#contact">
-        <motion.div
-          initial={{
-            x: 500,
-            opacity: 0,
-            scale: 0.5,
-          }}
-          animate={{
-            x: 0,
-            opacity: 1,
-            scale: 1,
-          }}
-          transition={{ duration: 1.5 }}
-          className="flex flex-row items-center text-gray-300 cursor-pointer"
-        >
-          {(data?.socials ?? [])
-            .filter(({ network }) => network && network === "email")
-            .map(({ url, network, fgColor, bgColor }) => (
-              <SocialIcon
-                key={network}
-                url={url ?? ""}
-                network={network}
-                fgColor={fgColor}
-                bgColor={bgColor}
-                className="cursor-pointer"
-              />
-            ))}
-          <p className="uppercase hidden text-gray-400 md:inline-flex text-sm">
-            Get in touch
-          </p>
-        </motion.div>
-      </Link>
+      {/* <Link href="#contact"> */}
+      <motion.div
+        initial={{
+          x: 500,
+          opacity: 0,
+          scale: 0.5,
+        }}
+        animate={{
+          x: 0,
+          opacity: 1,
+          scale: 1,
+        }}
+        transition={{ duration: 1.5 }}
+        className="flex flex-row items-center text-gray-300 cursor-pointer"
+      >
+        {(data?.socials ?? [])
+          .filter(({ network }) => network && network === "email")
+          .map(({ url, network, fgColor, bgColor }) => (
+            <SocialIcon
+              key={network}
+              url={url ?? ""}
+              network={network}
+              fgColor={fgColor}
+              bgColor={bgColor}
+              className="cursor-pointer"
+            />
+          ))}
+        <p className="uppercase hidden text-gray-400 md:inline-flex text-sm">
+          Get in touch
+        </p>
+      </motion.div>
+      {/* </Link> */}
     </header>
   );
 };

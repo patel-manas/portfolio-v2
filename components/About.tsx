@@ -24,7 +24,7 @@ const About = ({ data }: Props) => {
         viewport={{ once: true }}
         src={data?.aboutImage ?? ""}
         alt={"my pic"}
-        className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[500px] grayscale hover:grayscale-0"
+        className="mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[500px] grayscale hover:grayscale-0 sm:hidden"
       />
       <div className="space-y-10 px-0 md:px-10">
         <h4 className="text-4xl font-semibold">Here is a little background</h4>

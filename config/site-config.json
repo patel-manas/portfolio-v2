@@ -61,7 +61,7 @@
   "skills": {
     "technologies": [
       {
-        "name": "React.JS",
+        "name": "React",
         "proficiency": "Expert"
       },
       {
@@ -73,19 +73,23 @@
         "proficiency": "Expert"
       },
       {
-        "name": "HTML/CSS",
+        "name": "HTML5",
         "proficiency": "Expert"
       },
       {
-        "name": "Angular",
+        "name": "CSS3",
+        "proficiency": "Expert"
+      },
+      {
+        "name": "Angularjs",
         "proficiency": "intermediate"
       },
       {
-        "name": "Node.js",
+        "name": "Nodejs",
         "proficiency": "intermediate"
       },
       {
-        "name": "SQL",
+        "name": "postgresql",
         "proficiency": "intermediate"
       },
       {
@@ -97,8 +101,20 @@
         "proficiency": "beginer"
       },
       {
-        "name": "AWS",
+        "name": "googlecloud",
         "proficiency": "beginer"
+      },
+      {
+        "name": "github",
+        "proficiency": "Expert"
+      },
+      {
+        "name": "vscode",
+        "proficiency": "Expert"
+      },
+      {
+        "name": "jira",
+        "proficiency": "Expert"
       }
     ]
   },
@@ -107,14 +123,7 @@
       "title": "Senior Software Engineer - Frontend",
       "comapanyName": "Coinbase",
       "comapanyImg": "https://letarior.sirv.com/Images/logos/brand-coinbase-logo.webp",
-      "skills": [
-        "React",
-        "Typescript",
-        "Python",
-        "AWS Neptune",
-        "SQL",
-        "Airflow"
-      ],
+      "skills": ["React", "Typescript", "Python", "googlecloud", "postgresql"],
       "tenure": {
         "from": "May, 2022",
         "to": "Feb, 2023"
@@ -129,7 +138,7 @@
       "title": "Software Engineer III - Frontend",
       "comapanyName": "Walmart Labs",
       "comapanyImg": "https://letarior.sirv.com/Images/logos/5StAbRHLA4ZdyzQZVivm2c.jpg",
-      "skills": ["React", "Typescript", "GraphQL", "Node.js"],
+      "skills": ["React", "Typescript", "GraphQL", "Nodejs"],
       "tenure": {
         "from": "Nov, 2020",
         "to": "Apr, 2022"
@@ -143,7 +152,7 @@
       "title": "Software Engineer II - Frontend",
       "comapanyName": "Cisco Systems India Pvt. Ltd.",
       "comapanyImg": "https://letarior.sirv.com/Images/logos/download.png",
-      "skills": ["React", "Javascript", "Jquery", "Backbone.js"],
+      "skills": ["React", "Javascript", "Jquery", "Typescript"],
       "tenure": {
         "from": "Oct, 2019",
         "to": "Nov, 2011"

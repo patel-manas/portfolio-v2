@@ -27,13 +27,13 @@ const ExperienceCard = ({ data }: Props) => {
         <p className="font-bold text-2xl mt-1">{data?.comapanyName}</p>
         <div className="flex space-x-2 my-2">
           {data?.skills.map((skill) => {
-            return <DevIcon icon={skill} />;
+            return <DevIcon icon={skill} key={skill} />;
           })}
         </div>
         <p className="uppercase p-5 text-gray-300">working perios</p>
         <ol>
           {data?.summary.map((sum) => (
-            <li>{sum}</li>
+            <li key={sum}>{sum}</li>
           ))}
         </ol>
       </div>

@@ -14,9 +14,14 @@ export const DevIconSrc = ({ icon, variant = "" }: DevIconProps) => {
   return formUrl({ icon, variant });
 };
 
-const DevIcon: FC<DevIconProps> = ({ icon, variant = "" }) => {
-  const url = formUrl({ icon, variant });
-  return <img src={url} alt={icon} className="h-10 w-10" />;
+const DevIcon: FC<DevIconProps> = ({
+  icon,
+  variant = "",
+  width = "32px",
+  height = "auto",
+}) => {
+  const url = formUrl({ icon: (icon ?? "").toLowerCase(), variant });
+  return <img src={url} alt={icon} style={{ width, height }} />;
 };
 
 export default DevIcon;
