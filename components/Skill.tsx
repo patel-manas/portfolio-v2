@@ -28,7 +28,7 @@ const Skill = ({ directionLeft, tech }: Props) => {
         className="absolute opacity-0 group-hover:opacity-70 transition duration-300 ease-in-out 
       group-hover:bg-white h-24 w-24 xl:w-32 xl:h-32 md:w-28 md:h-28 rounded-full z-0"
       >
-        <div className="flex items-center justify-center h-full">
+        <div className="flex items-center justify-center h-full text-ellipsis  whitespace-wrap">
           <p className="text-3xl font-bold text-black opacity-100">
             {tech.proficiency}
           </p>

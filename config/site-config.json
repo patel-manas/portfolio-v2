@@ -32,7 +32,7 @@
     "heroImage": "https://letarior.sirv.com/Images/wonder_1676279095735.jpg",
     "taglines": [
       "Hi!, I am Manas.",
-      "Crafting dynamic user experiences.",
+      "Crafting the modern Apps",
       "React-ing to the web."
     ],
     "links": [
@@ -82,15 +82,15 @@
       },
       {
         "name": "Angularjs",
-        "proficiency": "intermediate"
+        "proficiency": "neutral"
       },
       {
         "name": "Nodejs",
-        "proficiency": "intermediate"
+        "proficiency": "neutral"
       },
       {
         "name": "postgresql",
-        "proficiency": "intermediate"
+        "proficiency": "neutral"
       },
       {
         "name": "Python",
@@ -138,7 +138,7 @@
       "title": "Software Engineer III - Frontend",
       "comapanyName": "Walmart Labs",
       "comapanyImg": "https://letarior.sirv.com/Images/logos/5StAbRHLA4ZdyzQZVivm2c.jpg",
-      "skills": ["React", "Typescript", "GraphQL", "Nodejs"],
+      "skills": ["React", "Typescript", "graphql", "Nodejs"],
       "tenure": {
         "from": "Nov, 2020",
         "to": "Apr, 2022"
@@ -168,7 +168,7 @@
       "title": "System Engineer",
       "comapanyName": "TCS",
       "comapanyImg": "https://letarior.sirv.com/Images/logos/Logo.svg",
-      "skills": ["Angular", "React", "Typescript", "MongoDB", "Docker"],
+      "skills": ["Angularjs", "React", "Typescript", "MongoDB", "Docker"],
       "tenure": {
         "from": "Aug, 2016",
         "to": "Oct, 2019"

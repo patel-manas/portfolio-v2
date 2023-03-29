@@ -3,11 +3,14 @@ import React, { FC } from "react";
 type DevIconProps = {
   icon: string;
   variant?: string;
+  width?: string;
+  height?: string;
 };
 
 const formUrl = ({ icon, variant }: DevIconProps) => {
+  console.log("variant", variant);
   return `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${icon}/${icon}-${
-    variant ? variant : "original"
+    icon === "graphql" ? "plain" : variant ? variant : "original"
   }.svg`;
 };
 export const DevIconSrc = ({ icon, variant = "" }: DevIconProps) => {
@@ -21,7 +24,7 @@ const DevIcon: FC<DevIconProps> = ({
   height = "auto",
 }) => {
   const url = formUrl({ icon: (icon ?? "").toLowerCase(), variant });
-  return <img src={url} alt={icon} style={{ width, height }} />;
+  return <img src={url} alt={icon} style={{ width, height }} title={icon} />;
 };
 
 export default DevIcon;
