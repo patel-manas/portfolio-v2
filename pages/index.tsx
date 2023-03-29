@@ -1,4 +1,5 @@
 import Head from "next/head";
+import useSWR from "swr";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
@@ -25,6 +26,7 @@ export default function Home({
     document: { landing, about, experience, skills },
   },
 }: HomeProps) {
+  console.log({ landing, about, experience, skills });
   return (
     <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0">
       <Head>
@@ -57,40 +59,33 @@ export default function Home({
   );
 }
 
+const fetcher = (url: string) => fetch(url).then((res) => res.json());
+
 export async function getStaticProps() {
   try {
-    // const response = await fetch(
-    // "https://ap-south-1.aws.data.mongodb-api.com/app/data-klowu/endpoint/data/v1/action/findOne",
-    // {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //     "Access-Control-Request-Headers": "*",
-    //     "api-key":
-    //       "PbuOTgHqMDqtO0bjBqPmyzEvH3OP6A3BTzYhh3OaTWNbGhjIXXSzRxpBrwXskbjs",
-    //   },
-    //   body: JSON.stringify({
-    //     collection: "portfolio",
-    //     database: "webweaver",
-    //     dataSource: "Cluster0",
-    //     projection: {},
-    //   }),
-    // }
-    // "../config/site-config.json"
-    // );
-    // const data = await response.json();
-    const file = await readFile(
-      "/Users/manaspatel/Documents/projects/portfolio-v2/config/site-config.json",
-      "utf8"
+    const response = await fetch(
+      "https://ap-south-1.aws.data.mongodb-api.com/app/data-klowu/endpoint/data/v1/action/findOne",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Request-Headers": "*",
+          "api-key":
+            "PbuOTgHqMDqtO0bjBqPmyzEvH3OP6A3BTzYhh3OaTWNbGhjIXXSzRxpBrwXskbjs",
+        },
+        body: JSON.stringify({
+          collection: "portfolio",
+          database: "webweaver",
+          dataSource: "Cluster0",
+          projection: {},
+        }),
+      }
     );
-    const data = JSON.parse(file);
-    console.log(
-      "data =========================================================================",
-      data
-    );
+    const data = await response.json();
+    console.log("data ===== = == == = ==== = = = ===", data);
     return {
       props: {
-        config: { document: data },
+        config: data,
       },
     };
   } catch (ex) {
@@ -98,10 +93,12 @@ export async function getStaticProps() {
     return {
       props: {
         config: {
-          landing: {},
-          about: {},
-          experience: {},
-          skills: {},
+          document: {
+            landing: {},
+            about: {},
+            experience: {},
+            skills: {},
+          },
         },
       },
     };

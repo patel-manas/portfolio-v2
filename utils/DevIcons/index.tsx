@@ -8,7 +8,6 @@ type DevIconProps = {
 };
 
 const formUrl = ({ icon, variant }: DevIconProps) => {
-  console.log("variant", variant);
   return `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${icon}/${icon}-${
     icon === "graphql" ? "plain" : variant ? variant : "original"
   }.svg`;

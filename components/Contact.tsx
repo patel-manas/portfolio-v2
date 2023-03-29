@@ -19,7 +19,7 @@ const Contact = (props: Props) => {
   } = useForm<Inputs>();
 
   const onSubmit: SubmitHandler<Inputs> = (formData) => {
-    console.log("formSData", formData);
+    // console.log("formSData", formData);
   };
 
   return (
