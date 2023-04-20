@@ -14,6 +14,7 @@ import { LandingConfig, SiteConfig } from "@/config/types";
 import all from "../config/site-config.json";
 const inter = Inter({ subsets: ["latin"] });
 import { readFile } from "fs/promises";
+import useWindowDimensions from "./useWinodowDimenssion";
 
 type HomeProps = {
   config: {
@@ -27,34 +28,35 @@ export default function Home({
   },
 }: HomeProps) {
   console.log({ landing, about, experience, skills });
+  const { width, height } = useWindowDimensions();
+  console.log("width, height", width, height);
   return (
     <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0">
       <Head>
         <title>Manas Patels portfolio</title>
       </Head>
       {/* Header */}
-      <Header data={landing} />
+      {/* {width && width > 768 && <Header data={landing} />} */}
+      <Header data={landing} width={width ?? 0} />
+
       {/* Hero */}
       <section id="hero" className="snap-center">
         <Hero data={landing} />
       </section>
       <section id="about" className="snap-center">
-        <About data={about} />
+        <About data={about} width={width ?? 0} />
       </section>
       <section id="experience" className="snap-center">
-        <Experience data={experience} />
+        <Experience data={experience} width={width ?? 0} />
       </section>
       <section id="skills" className="snap-center">
-        <Skills data={skills} />
-      </section>
-      {/* Projects */}
-      <section id="projects" className="snap-center">
-        {/* <Projects /> */}
+        <Skills data={skills} width={width ?? 0} />
       </section>
       {/* Contact me */}
       <section id="contact" className="snap-center">
-        <Contact />
+        <Contact width={width ?? 0} />
       </section>
+      {/* {width && width <= 768 && <Header data={landing} />} */}
     </div>
   );
 }

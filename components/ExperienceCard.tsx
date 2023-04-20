@@ -5,11 +5,18 @@ import React from "react";
 
 type Props = {
   data: ExperienceConfig | undefined;
+  width: number;
 };
 
-const ExperienceCard = ({ data }: Props) => {
+const ExperienceCard = ({ data, width }: Props) => {
+  const isMobile = width && width <= 480;
+  console.log("experience card", isMobile);
   return (
-    <motion.article className="flex flex-col rounded-lg items-center spoace-y-7 flex-shrink-0  w-[500px] md:w-[400px] xl:w-[700px] snap-center bg-[#292929] p-10 mt-16 overflow-y-auto">
+    <motion.article
+      className={`flex flex-col rounded-lg items-center spoace-y-7 flex-shrink-0 ${
+        !isMobile ? "w-[500px]" : "w-[350px]"
+      }  md:w-[400px] xl:w-[700px] snap-center bg-[#292929] p-10 mt-16 overflow-y-auto`}
+    >
       <motion.img
         className="w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-cotain"
         src={data?.comapanyImg}
@@ -22,7 +29,9 @@ const ExperienceCard = ({ data }: Props) => {
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
       />
-      <div className="px-0 md:px-10 ">
+      <div
+        className={`px-0 md:px-${isMobile ? "5" : "10"} ${isMobile ? "" : ""}`}
+      >
         <h4 className="text-4xl font-light py-2">{data?.title}</h4>
         <p className="font-bold text-2xl mt-1 py-2">{data?.comapanyName}</p>
         <div className="flex space-x-2 py-2 pl-0">
@@ -35,7 +44,9 @@ const ExperienceCard = ({ data }: Props) => {
           })}
         </div>
         <p className="uppercase p-5 pl-0 text-gray-300">{`${data?.tenure.from} to ${data?.tenure.to}`}</p>
-        <ol className="list-disc">
+        <ol
+          className={`list-disc ${!isMobile ? "" : "max-h-52 overflow-y-auto"}`}
+        >
           {data?.summary.map((sum) => (
             <li key={sum} className="py-2">
               {sum}

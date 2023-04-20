@@ -5,9 +5,10 @@ import Skill from "./Skill";
 
 type Props = {
   data: SkillConfig | undefined;
+  width: number;
 };
 
-const Skills = ({ data }: Props) => {
+const Skills = ({ data, width }: Props) => {
   return (
     <motion.div
       className="h-screen flex relative flex-col text-center md:text-left xl:flex-row max-w-[2000px] 

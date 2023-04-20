@@ -6,11 +6,21 @@ import { SocialIcon } from "react-social-icons";
 
 type Props = {
   data: LandingConfig | undefined;
+  width: number;
 };
 
-const Header = ({ data }: Props) => {
+const Header = ({ data, width }: Props) => {
+  const headerStylesForDesktop =
+    "flex flex-row item-start justify-between p-5 sticky top-0 max-w-7xl mx-auto z-50";
+  const headerStylesForMobile =
+    "flex flex-row item-start justify-between p-5 fixed bottom-0 max-w-7xl w-full h-4 z-50 bg-[#242424] border-t-1 border-blue-500 shadow-md";
+
   return (
-    <header className="flex flex-row item-start justify-between p-5 sticky top-0 max-w-7xl mx-auto z-50">
+    <header
+      className={
+        width && width > 768 ? headerStylesForDesktop : headerStylesForMobile
+      }
+    >
       <motion.div
         initial={{
           x: -500,

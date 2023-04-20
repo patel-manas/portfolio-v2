@@ -19,3 +19,30 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
+
+#hero-img {
+  font-size: 62.5%;
+  font-family: Poppins, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  animation: morph 15s ease-in-out infinite;
+  background-image: url(https://letarior.sirv.com/Images/wonder_1676279095735.jpg);
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 3px solid #2d2e32;
+  border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  height: 25rem;
+  position: relative;
+  transition: all 3s ease-in-out;
+  width: 25rem;
+}
+
+@media (max-width: 480px) {
+  /* Your mobile-specific styles here */
+  #hero-img {
+    height: 15rem;
+    width: 15rem;
+  }
+}

@@ -8,16 +8,19 @@ type Inputs = {
   subject: string;
   message: string;
 };
-type Props = {};
+type Props = {
+  width: number;
+};
 
-const Contact = (props: Props) => {
+const Contact = ({ width }: Props) => {
   const {
     register,
     handleSubmit,
     watch,
     formState: { errors },
   } = useForm<Inputs>();
-
+  const isLarge = width && width > 480;
+  console.log("isLarge", isLarge);
   const onSubmit: SubmitHandler<Inputs> = (formData) => {
     // console.log("formSData", formData);
   };
@@ -30,21 +33,25 @@ const Contact = (props: Props) => {
       <h4 className="absolute top-8 uppercase tracking-[20px] text-gray-500 text-2xl">
         Contact
       </h4>
-      <div className="flex flex-col space-y-10 px-6">
-        <h4 className="text-4xl font-semibold text-center">
+      <div className="flex flex-col space-y-10 px-6 lg:w-1/2">
+        <h4
+          className={`text-4xl font-semibold text-center ${
+            !isLarge ? "mt-4" : ""
+          }`}
+        >
           You can reach me with below details{" "}
           <span className="decoration-[#F7AB0A]/50 underline">Lets Talk.</span>
         </h4>
-        <div className="space-y-10">
-          <div className="flex items-center space-x-5 justify-center">
+        <div className={`space-y-${isLarge ? "10" : "4"}`}>
+          <div className={`flex items-center space-x-5 justify-center `}>
             <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
             <p className="text-2xl">(+91)-9437766389</p>
           </div>
-          <div className="flex items-center space-x-5 justify-center">
+          <div className={`flex items-center space-x-5 justify-center`}>
             <MapPinIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
             <p className="text-2xl">Banglore, India</p>
           </div>
-          <div className="flex items-center space-x-5 justify-center">
+          <div className={`flex items-center space-x-5 justify-center `}>
             <EnvelopeIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
             <p className="text-2xl">manas22patel@gmail.com</p>
           </div>
@@ -53,22 +60,22 @@ const Contact = (props: Props) => {
 
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="flex flex-col space-y-2 w-fit mx-auto"
+        className="flex flex-col space-y-2 w-full lg:w-1/2"
       >
-        <div className="flex space-x-2">
-          <input
-            placeholder="Name"
-            className="contact-input"
-            type="text"
-            {...register("name")}
-          />
-          <input
-            placeholder="Email"
-            className="contact-input"
-            type="email"
-            {...register("email")}
-          />
-        </div>
+        {/* <div className="flex space-x-2 md:flex-col"> */}
+        <input
+          placeholder="Name"
+          className="contact-input"
+          type="text"
+          {...register("name")}
+        />
+        <input
+          placeholder="Email"
+          className="contact-input"
+          type="email"
+          {...register("email")}
+        />
+        {/* </div> */}
 
         <input
           placeholder="Subject"
